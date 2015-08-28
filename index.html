@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>Master of Puppets</title>
+
+      <!-- Bootstrap -->
+      <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- Landing page -->
+      <link href="style.css" rel="stylesheet">
+      <script src="node_modules/socket.io/node_modules/socket.io-client/socket.io.js"></script>
+      <script src="node_modules/angular/angular.min.js"></script>
+      <script src="node_modules/angular-route/angular-route.min.js"></script>
+      <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+      <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  </head>
+  <body ng-app="dnd">
+
+      <div class="container-fluid">
+        <div class="row" ng-view>
+            Loading...
+          </div>
+      </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins)
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+      <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- routing -->
+        <script src="app.js"></script>
+        <script src="Services/socket-factory.js"></script>
+        <!-- Combat -->
+        <script src="Combat/combat.js"></script>
+        <script src="ControlPanel/control.js"></script>
+        <script src="Stats/stats.js"></script>
+        <script src="Combat/setInitModal.js"></script>
+      <script src="node_modules/angular-google-chart/ng-google-chart.js"></script>
+      <script src="Services/userService.js"></script>
+  </body>
+</html>

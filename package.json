@@ -1,0 +1,29 @@
+{
+  "name": "Master_of_Puppets",
+  "version": "0.0.0",
+  "description": "To assist with calculations, and keep track of player statistics",
+  "dependencies": {
+    "angular": "~1.3.16",
+    "angular-route": "~1.3.0",
+    "jquery": "2.1.1",
+    "socket.io": "~1.3.5",
+    "bootstrap": "~3.3.5",
+    "chart.js": "~1.0.2",
+    "react": "~0.13.3",
+    "react-chartjs": "~0.6.0",
+    "angular-google-chart": "https://registry.npmjs.org/angular-google-chart/-/angular-google-chart-0.0.11.tgz",
+    "angular-dragdrop": "~1.0.5",
+    "jquery-ui": "~1.10.5"
+  },
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -a 0.0.0.0 -p 8001"
+  },
+  "keywords": [
+    "dnd",
+    "stats"
+  ],
+  "author": "BenniBjorn",
+  "license": "BSD-2-Clause"
+}

@@ -1,0 +1,29 @@
+Drag and drop:
+    Make it so that you can drag an entity on to another entity 
+        this reveals a modal (hit / miss)
+        If you press hit - it asks how much damage it did
+        If it's a miss, well then that's a miss..
+        Automatically fill in all info
+    After this, move the one who's turn it is to the top
+http://codef0rmer.github.io/angular-dragdrop/#/
+
+    
+Naming:
+    Be able to name enemies and players for easier tracking
+    Also maybe name the players
+    
+Modals
+    If you click a player, you should be able to make notes
+    also see his character name and such
+    (maybe the same for enemies? tracking appearance?)
+
+Create combat:
+    be able to create combat that asks for initiative rolls
+    then sorts them accordingly with 
+    
+    <div ng-repeat="model in collection | orderBy: 'id' as filtered_result track by model.id">
+        {{model.name}}
+    </div>
+    
+    after combat maybe list up some stats (B krafa) - who did the most damage in this fight etc.
+    

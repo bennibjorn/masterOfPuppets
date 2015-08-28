@@ -1,0 +1,53 @@
+.playerList {
+    margin-bottom: 0.3em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    text-align: center;
+    padding: 0.4em;
+    /*font-size: 1.4em;*/
+}
+.combatTitle {
+    text-align: center;
+}
+.pInput {
+    width: 3em;
+    border-radius: 0.3em;
+    border: 1px solid #ccc;
+}
+.hitMissPie {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 3em;
+    text-align: center;
+    margin-left: 3%;
+}
+.userPic {
+    margin-bottom: 1em;
+    text-align: center;
+    overflow: hidden;
+    height: 10em;
+    margin-left: 3%;
+}
+.bottomChart {
+    padding: 1em;
+    padding-left: 2em;
+    text-align: center;
+}
+.input-group .form-control {
+  float: none;
+  width: 10em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.playerCombatTile {
+    cursor:pointer;
+    margin: 1em;
+    text-align: center;
+    height: 8em;
+    width: 9em;
+    border: 1px solid #ccc;
+    border-radius: 5em;
+}
+.playerCombatName {
+    margin-top: 3em;
+}

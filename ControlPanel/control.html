@@ -1,0 +1,98 @@
+<div class="col-xs-12 playerList" ng-repeat="p in pcs">
+    <div class="col-xs-1"> {{ p.name }} </div>
+    <div class="col-xs-1"> <div class="row"> Hit: {{ p.hit }} </div>
+        <div class="row">
+            <form>
+                <button class="btn btn-danger" ng-click="playerHit(p.name, 'dec')">-</button>
+                <button class="btn btn-success" ng-click="playerHit(p.name, 'inc')">+</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-xs-1"> <div class="row"> Missed: {{ p.miss }} </div>
+        <div class="row">
+            <form>
+                <button class="btn btn-danger" ng-click="playerMiss(p.name, 'dec')">-</button>
+                <button class="btn btn-success" ng-click="playerMiss(p.name, 'inc')">+</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-xs-3">
+        <div class="row">Damage dealt: {{ p.dmgDealt }}</div>
+        <div class="row">
+            <form>
+                <button class="btn btn-danger" ng-click="playerDmgDealt(p.name, 'dec', pDmgDealt)">-</button>
+                    <input class="pInput" ng-model="pDmgDealt" type="number">
+                <button class="btn btn-success" ng-click="playerDmgDealt(p.name, 'inc', pDmgDealt)">+</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-xs-3"> <div class="row">Damage taken: {{ p.dmgTaken }} </div>
+        <div class="row">
+            <form>
+                <button class="btn btn-danger" ng-click="playerDmgTaken(p.name, 'dec', pDmgTaken)">-</button>
+                    <input class="pInput" ng-model="pDmgTaken" type="number">
+                <button class="btn btn-success" ng-click="playerDmgTaken(p.name, 'inc', pDmgTaken)">+</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-xs-3"> <div class="row">Healing done: {{ p.healingDone }} </div>
+        <div class="row">
+            <form>
+                <button class="btn btn-danger" ng-click="playerHeal(p.name, 'dec', pHeal)">-</button>
+                    <input class="pInput" ng-model="pHeal" type="number">
+                <button class="btn btn-success" ng-click="playerHeal(p.name, 'inc', pHeal)">+</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 playerList">Session XP so far: {{ sessionXP }}</div>
+</div>
+<div class="addEnemy col-xs-12">
+    <form>
+        <div class="input-group">
+            <input type="text" ng-model="name" placeholder="Name..." class="form-control" aria-label="...">
+            Initiative<input type="number" ng-model="init" placeholder="Initiative roll..." class="form-control" aria-label="...">
+            AC<input type="number" ng-model="ac" placeholder="Armor class..." class="form-control" aria-label="...">
+            HP<input type="number" ng-model="hp" placeholder="Health..." class="form-control" aria-label="...">
+            XP<input type="number" ng-model="xp" placeholder="Experience given..." class="form-control" aria-label="...">
+        </div><!-- /input-group -->
+        <button class="btn btn-danger" ng-click="addEnemy(name, init, ac, hp, xp)">Add</button>
+  </div><!-- /.col-lg-6 -->
+    </form>
+</div>
+<div class="enemies col-xs-12" ng-repeat="e in enemies">
+    <div class="row">
+        <div class="col-xs-12 playerList">
+            <div class="col-xs-1">{{ e.name }}</div>
+            <div class="col-xs-2">Initiative: {{ e.initiative }}</div>
+            <div class="col-xs-4">
+                <div class="row">
+                    <form>
+                            HP: {{ e.HP }} <input class="pInput" type="number" ng-model="eDmg">
+                    </form>
+                </div>
+                <div class="row">
+                    <button class="btn btn-danger" ng-click="enemyDamage(e.name, eDmg)">-</button>
+                </div>
+            </div>
+            <div class="col-xs-2">AC: {{ e.AC }}</div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--
+
+Player - times hit +/- - times missed +/- - damage dealt (input + to total) - damage taken (same as prev) - healing done (same as prev)
+
+List ---
+Enemy - initiative - AC - current HP - special abilities
+
+Select encounter? - list enemies/difficulty
+Create new encounter (B krafa)
+
+
+
+-->
