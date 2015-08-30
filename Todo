@@ -11,19 +11,17 @@ http://codef0rmer.github.io/angular-dragdrop/#/
 Naming:
     Be able to name enemies and players for easier tracking
     Also maybe name the players
-    
+/*    
 Modals
     If you click a player, you should be able to make notes
     also see his character name and such
     (maybe the same for enemies? tracking appearance?)
-
+*/
 Create combat:
-    be able to create combat that asks for initiative rolls
-    then sorts them accordingly with 
+    add initiative rolls to players, press "start combat" and go to combat screen
+    tracks who's turn it is with an array, going through the array as combat goes on.. removing enemies that die
     
-    <div ng-repeat="model in collection | orderBy: 'id' as filtered_result track by model.id">
-        {{model.name}}
-    </div>
-    
+    When all enemies are dead, end combat and go back to /control
     after combat maybe list up some stats (B krafa) - who did the most damage in this fight etc.
+        would be done by displaying /combatEnd or something for a set amount of seconds
     

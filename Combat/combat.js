@@ -2,9 +2,10 @@ angular.module('dnd')
 .controller('CombatController', ['$scope', '$location', 'userService', 'socket',
 function ($scope, $location, userService, socket) {
 
-    $scope.players = [];
-    $scope.enemies = [];
-
+    $scope.combatants = [];
+    
+    
+    
     socket.on('updatePlayers', function(data) {
         $scope.players = data.players;
     });
@@ -33,7 +34,7 @@ function ($scope, $location, userService, socket) {
         socket.emit('updatePlayerStat', {players: $scope.pcs});
     };
     var init = function() {
-        socket.emit('getPlayers');
+        //socket.emit('getPlayers');
         //get nickname
         //userService.addPlayers();
         //$scope.pcs = userService.getPcs();
