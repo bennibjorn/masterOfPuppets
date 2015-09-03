@@ -2,6 +2,7 @@ angular.module('dnd')
   .factory('userService', function() {
     var players = [];
     var enemies = [];
+    var user = [];
 
     return {
         // nickname functions
@@ -16,6 +17,12 @@ angular.module('dnd')
         },
         setEnemies : function(e) {
             enemies = e;
+        },
+        getUserObj : function() {
+            return user;
+        },
+        setUserObj : function(u) {
+            user = u;
         }
     };
 });

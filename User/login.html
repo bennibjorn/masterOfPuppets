@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 inputDiv">
+            <!-- Error message -->
+            <div class="alert alert-danger" ng-cloak ng-show="errorMessage != ''">
+                {{errorMessage}}
+            </div>
+            <!-- Form should send room code to be checked and nickname to server -->
+            <form class="login" ng-submit="login()">
+
+                <label for="username">Username</label>
+                <input class="form-control" placeholder="Username..." type="text" ng-model="username">
+
+                <label for="password">Password</label>
+                <input class="form-control" placeholder="Password" type="text" ng-model="password">
+                <br>
+                <button class="btn btn-primary" type="submit">Login</button>
+            </form>
+            <button class="btn btn-success">Create new user</button>
+        </div>
+    </div> <!-- row close -->
+</div> <!-- container close -->

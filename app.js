@@ -7,6 +7,14 @@ angular.module('dnd').config(
                 templateUrl: 'Stats/stats.html',
                 controller: 'StatsController'
             })
+            .when('/profile', {
+                templateUrl: 'User/profile.html',
+                controller: 'ProfileController'
+            })
+            .when('/login', {
+                templateUrl: 'User/login.html',
+                controller: 'LoginController'
+            })
             .when('/stats', {
                 templateUrl: 'Stats/stats.html',
                 controller: 'StatsController'
