@@ -18,10 +18,32 @@ Modals
     (maybe the same for enemies? tracking appearance?)
 */
 Create combat:
-    add initiative rolls to players, press "start combat" and go to combat screen
     tracks who's turn it is with an array, going through the array as combat goes on.. removing enemies that die
+        when it's your turn, scroll to spells
     
-    When all enemies are dead, end combat and go back to /control
+    if DM - When all enemies are dead, end combat and go back to /control
     after combat maybe list up some stats (B krafa) - who did the most damage in this fight etc.
         would be done by displaying /combatEnd or something for a set amount of seconds
     
+Login
+    default login for now, later mongodb and fun stuff
+    New user
+        Username
+        password
+        character name
+        character picture
+
+Profile pages
+    individual stats
+    spells
+        add spell
+            name
+            casting time (action)
+            range
+            components
+            duration
+            description
+            at higher levels
+    see group stats page
+    
+Link with mongodb
